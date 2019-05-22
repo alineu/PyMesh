@@ -16,7 +16,6 @@ exec(open(os.path.join('python/pymesh/version.py')).read())
 num_cores = multiprocessing.cpu_count()
 num_cores = max(1, num_cores)
 num_cores = min(num_cores, int(os.environ.get("NUM_CORES", num_cores)))
-num_cores = min(num_cores,1)
 
 class BinaryDistribution(Distribution):
     def is_pure(self):
